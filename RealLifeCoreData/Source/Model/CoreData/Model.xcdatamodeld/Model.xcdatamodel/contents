@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model name="" userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="1171" systemVersion="11D50" minimumToolsVersion="Xcode 4.1" macOSVersion="Automatic" iOSVersion="Automatic">
+    <entity name="CDAddress" representedClassName="CDAddress" syncable="YES">
+        <attribute name="address" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="city" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="state" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="author" optional="YES" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="CDAuthor" inverseName="address" inverseEntity="CDAuthor" syncable="YES"/>
+        <relationship name="publisher" optional="YES" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="CDPublisher" inverseName="address" inverseEntity="CDPublisher" syncable="YES"/>
+    </entity>
+    <entity name="CDAuthor" representedClassName="CDAuthor" syncable="YES">
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="address" optional="YES" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="CDAddress" inverseName="author" inverseEntity="CDAddress" syncable="YES"/>
+        <relationship name="books" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="CDBook" inverseName="authors" inverseEntity="CDBook" syncable="YES"/>
+    </entity>
+    <entity name="CDBook" representedClassName="CDBook" syncable="YES">
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="publicationDate" optional="YES" attributeType="Date" syncable="YES"/>
+        <relationship name="authors" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="CDAuthor" inverseName="books" inverseEntity="CDAuthor" syncable="YES"/>
+        <relationship name="publisher" optional="YES" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="CDPublisher" inverseName="books" inverseEntity="CDPublisher" syncable="YES"/>
+    </entity>
+    <entity name="CDPublisher" representedClassName="CDPublisher" syncable="YES">
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="address" optional="YES" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="CDAddress" inverseName="publisher" inverseEntity="CDAddress" syncable="YES"/>
+        <relationship name="books" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="CDBook" inverseName="publisher" inverseEntity="CDBook" syncable="YES"/>
+    </entity>
+    <elements>
+        <element name="CDBook" positionX="160" positionY="192" width="128" height="105"/>
+        <element name="CDPublisher" positionX="358" positionY="252" width="128" height="90"/>
+        <element name="CDAuthor" positionX="351" positionY="117" width="128" height="90"/>
+        <element name="CDAddress" positionX="556" positionY="162" width="128" height="120"/>
+    </elements>
+</model>
