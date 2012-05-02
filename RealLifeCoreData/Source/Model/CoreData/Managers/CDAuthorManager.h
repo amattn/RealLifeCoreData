@@ -13,6 +13,8 @@
 
 #pragma mark ** Constant Defines **
 
+#define CD_KEY_NAME @"name"
+
 #pragma mark ** Protocols & Declarations **
 
 @interface CDAuthorManager : RLBaseEntityManager

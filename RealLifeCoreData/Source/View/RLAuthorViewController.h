@@ -8,13 +8,13 @@
  * Created from templates: https://github.com/amattn/RealLifeXcode4Templates
  */
 
-#import <UIKit/UIKit.h>
+#import "RLFetchedResultsViewController.h"
 
 #pragma mark ** Constant Defines **
 
 #pragma mark ** Protocols & Declarations **
 
-@interface RLAuthorTableViewController : UITableViewController
+@interface RLAuthorViewController : RLFetchedResultsViewController <UIActionSheetDelegate>
 {
 
 }
@@ -23,6 +23,11 @@
 
 #pragma mark ** Properties **
 
+@property (nonatomic, weak) IBOutlet UIBarButtonItem *actionBarButton;
+
 #pragma mark ** Methods **
+
+- (IBAction)insertAuthors:(id)sender;
+- (IBAction)deleteAllAuthors:(id)sender;
 
 @end

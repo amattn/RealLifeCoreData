@@ -24,7 +24,8 @@
 		2A0B218E1541272F0030DA82 /* CDPublisherManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 2AA8787C154122FA0016726F /* CDPublisherManager.m */; };
 		2A0B218F154127370030DA82 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2AA878601541214A0016726F /* CoreData.framework */; };
 		2A7B0B601541D73E009C7842 /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 2AA87858154120E60016726F /* Model.xcdatamodeld */; };
-		2AA0E5BB15444D41004D70C8 /* RLAuthorTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2AA0E5BA15444D41004D70C8 /* RLAuthorTableViewController.m */; };
+		2A8A88461551769E006E8B66 /* RLFetchedResultsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A8A88451551769E006E8B66 /* RLFetchedResultsViewController.m */; };
+		2AA0E5BB15444D41004D70C8 /* RLAuthorViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2AA0E5BA15444D41004D70C8 /* RLAuthorViewController.m */; };
 		2AA8781D154120BC0016726F /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2AA8781C154120BC0016726F /* UIKit.framework */; };
 		2AA8781F154120BC0016726F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2AA8781E154120BC0016726F /* Foundation.framework */; };
 		2AA87821154120BC0016726F /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2AA87820154120BC0016726F /* CoreGraphics.framework */; };
@@ -74,8 +75,10 @@
 		2A0B2177154125AF0030DA82 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = Resources/en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		2A0B217C154125AF0030DA82 /* AutoTests-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "AutoTests-Prefix.pch"; sourceTree = "<group>"; };
 		2A0B2183154126FA0030DA82 /* CoreDataTestCase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CoreDataTestCase.m; sourceTree = "<group>"; };
-		2AA0E5B915444D41004D70C8 /* RLAuthorTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RLAuthorTableViewController.h; path = Source/View/RLAuthorTableViewController.h; sourceTree = "<group>"; };
-		2AA0E5BA15444D41004D70C8 /* RLAuthorTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RLAuthorTableViewController.m; path = Source/View/RLAuthorTableViewController.m; sourceTree = "<group>"; };
+		2A8A88441551769E006E8B66 /* RLFetchedResultsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RLFetchedResultsViewController.h; path = Source/View/RLFetchedResultsViewController.h; sourceTree = "<group>"; };
+		2A8A88451551769E006E8B66 /* RLFetchedResultsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RLFetchedResultsViewController.m; path = Source/View/RLFetchedResultsViewController.m; sourceTree = "<group>"; };
+		2AA0E5B915444D41004D70C8 /* RLAuthorViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; name = RLAuthorViewController.h; path = Source/View/RLAuthorViewController.h; sourceTree = "<group>"; };
+		2AA0E5BA15444D41004D70C8 /* RLAuthorViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RLAuthorViewController.m; path = Source/View/RLAuthorViewController.m; sourceTree = "<group>"; };
 		2AA87818154120BC0016726F /* RealLifeCoreData.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RealLifeCoreData.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2AA8781C154120BC0016726F /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		2AA8781E154120BC0016726F /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -213,8 +216,8 @@
 				2AA8782C154120BC0016726F /* RLAppDelegate.h */,
 				2AA8782D154120BC0016726F /* RLAppDelegate.m */,
 				2AA87854154120D90016726F /* Model */,
-				2AA8782F154120BC0016726F /* Resources */,
 				2AA87833154120BC0016726F /* View */,
+				2AA8782F154120BC0016726F /* Resources */,
 				2AA87823154120BC0016726F /* Supporting Files */,
 			);
 			path = RealLifeCoreData;
@@ -243,8 +246,10 @@
 		2AA87833154120BC0016726F /* View */ = {
 			isa = PBXGroup;
 			children = (
-				2AA0E5B915444D41004D70C8 /* RLAuthorTableViewController.h */,
-				2AA0E5BA15444D41004D70C8 /* RLAuthorTableViewController.m */,
+				2A8A88441551769E006E8B66 /* RLFetchedResultsViewController.h */,
+				2A8A88451551769E006E8B66 /* RLFetchedResultsViewController.m */,
+				2AA0E5B915444D41004D70C8 /* RLAuthorViewController.h */,
+				2AA0E5BA15444D41004D70C8 /* RLAuthorViewController.m */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -502,7 +507,8 @@
 				2AA8787D154122FA0016726F /* CDPublisherManager.m in Sources */,
 				2AA87881154123070016726F /* CDAddressManager.m in Sources */,
 				2AA878851541231B0016726F /* RLBaseEntityManager.m in Sources */,
-				2AA0E5BB15444D41004D70C8 /* RLAuthorTableViewController.m in Sources */,
+				2AA0E5BB15444D41004D70C8 /* RLAuthorViewController.m in Sources */,
+				2A8A88461551769E006E8B66 /* RLFetchedResultsViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

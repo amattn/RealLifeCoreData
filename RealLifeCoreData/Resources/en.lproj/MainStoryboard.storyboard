@@ -26,32 +26,6 @@
             </objects>
             <point key="canvasLocation" x="-216" y="49"/>
         </scene>
-        <!--Author Table View Controller - Authors-->
-        <scene sceneID="PaG-Zc-MmX">
-            <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="9r2-Cr-TbN" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <tableViewController id="fXj-Ut-ebE" customClass="RLAuthorTableViewController" sceneMemberID="viewController">
-                    <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="yjs-ok-zCa">
-                        <rect key="frame" x="0.0" y="64" width="320" height="367"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <prototypes>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="author_cell" id="pOJ-ai-aSG">
-                                <rect key="frame" x="0.0" y="22" width="320" height="44"/>
-                                <autoresizingMask key="autoresizingMask"/>
-                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                                    <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
-                                    <autoresizingMask key="autoresizingMask"/>
-                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                </view>
-                            </tableViewCell>
-                        </prototypes>
-                    </tableView>
-                    <navigationItem key="navigationItem" title="Authors" id="Lu6-mf-Kip"/>
-                </tableViewController>
-            </objects>
-            <point key="canvasLocation" x="902" y="-295"/>
-        </scene>
         <!--Table View Controller - Books-->
         <scene sceneID="CJw-45-L0k">
             <objects>
@@ -146,16 +120,88 @@
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
-                        <segue destination="fXj-Ut-ebE" kind="relationship" relationship="rootViewController" id="35c-if-fWe"/>
+                        <segue destination="Uk5-ln-jnW" kind="relationship" relationship="rootViewController" id="yxr-XH-mgW"/>
                     </connections>
                 </navigationController>
             </objects>
             <point key="canvasLocation" x="384" y="-295"/>
         </scene>
+        <!--Author View Controller - Authors-->
+        <scene sceneID="BlH-dC-Vky">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="TVp-BX-b0S" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <viewController id="Uk5-ln-jnW" customClass="RLAuthorViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="iwR-2S-NmO">
+                        <rect key="frame" x="0.0" y="64" width="320" height="367"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="hEX-U8-hMB">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="367"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" indentationWidth="10" reuseIdentifier="author_cell" textLabel="Qk1-Tt-1pQ" style="IBUITableViewCellStyleDefault" id="jjH-fh-8by">
+                                        <rect key="frame" x="0.0" y="22" width="320" height="44"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="Title" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Qk1-Tt-1pQ">
+                                                    <rect key="frame" x="10" y="0.0" width="300" height="43"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <color key="highlightedColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                </label>
+                                            </subviews>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        </view>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="Uk5-ln-jnW" id="Iwo-fl-xfs"/>
+                                    <outlet property="delegate" destination="Uk5-ln-jnW" id="7Vh-uk-Iww"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Authors" id="wLI-KM-Mpp">
+                        <barButtonItem key="leftBarButtonItem" title="Delete All" id="RsC-qy-Oqa">
+                            <connections>
+                                <action selector="deleteAllAuthors:" destination="Uk5-ln-jnW" id="fq3-QQ-1ib"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" systemItem="action" id="N4J-lw-Us4">
+                            <connections>
+                                <action selector="insertAuthors:" destination="Uk5-ln-jnW" id="A5i-jB-cws"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="actionBarButton" destination="N4J-lw-Us4" id="ghh-bs-Y4i"/>
+                        <outlet property="tableView" destination="hEX-U8-hMB" id="oSJ-Zk-fyp"/>
+                    </connections>
+                </viewController>
+            </objects>
+            <point key="canvasLocation" x="909" y="-295"/>
+        </scene>
     </scenes>
     <classes>
-        <class className="RLAuthorTableViewController" superclassName="UITableViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/RLAuthorTableViewController.h"/>
+        <class className="RLAuthorViewController" superclassName="RLFetchedResultsViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/RLAuthorViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="deleteAllAuthors:"/>
+                <relationship kind="action" name="insertAuthors:"/>
+                <relationship kind="outlet" name="actionBarButton" candidateClass="UIBarButtonItem"/>
+            </relationships>
+        </class>
+        <class className="RLFetchedResultsViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/RLFetchedResultsViewController.h"/>
+            <relationships>
+                <relationship kind="outlet" name="tableView" candidateClass="UITableView"/>
+            </relationships>
         </class>
     </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
